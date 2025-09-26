@@ -3,6 +3,7 @@ title: About Me
 section: about
 permalink: /about/
 ---
+Hello, I am Sumit. 
 
 ## Snapshot
 Current role: Building scalable Knowledge systems @ Microsoft AI  
@@ -30,7 +31,3 @@ VS Code, Tech Blogs
 
 ## Contact
 LinkedIn: https://www.linkedin.com/in/stgarg/
-
----
-### Site Mechanics (for future you)
-Posts live in `_blog/` (no date required). Each file just needs front matter with a `title:`.
