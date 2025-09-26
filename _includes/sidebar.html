@@ -1,0 +1,28 @@
+<nav class="sidebar" role="navigation" aria-label="Site navigation">
+  <div class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></div>
+  <div class="site-tagline">{{ site.description }}</div>
+
+  {% assign about_pages = site.pages | where: 'section','about' | sort: 'title' %}
+  {% if about_pages.size > 0 %}
+    <ul class="nav-section">
+      <li class="nav-heading">About</li>
+      {% for p in about_pages %}
+        <li><a href="{{ p.url | relative_url }}" {% if p.url == page.url %}class="active"{% endif %}>{{ p.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% assign blog_docs = site.blog | sort: 'date' | reverse %}
+  {% if blog_docs.size > 0 %}
+    <ul class="nav-section">
+      <li class="nav-heading">Blog</li>
+      {% for post in blog_docs %}
+        <li><a href="{{ post.url | relative_url }}" {% if post.url == page.url %}class="active"{% endif %}>{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <footer class="sidebar-footer">
+    <p><a href="{{ '/' | relative_url }}">Home</a></p>
+  </footer>
+</nav>

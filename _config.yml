@@ -1,0 +1,31 @@
+title: "My thoughts"
+description: "Random thoughts about reading and occasional technology."
+url: "https://stgarg.github.io"
+baseurl: "/blog" # project site at /blog; change to "" if using a user site repo
+
+# Custom collection for undated blog posts
+collections:
+	blog:
+		output: true
+		permalink: /blog/:name/
+
+markdown: kramdown
+timezone: UTC
+
+defaults:
+	- scope:
+			path: _blog
+			type: blog
+		values:
+			layout: post
+			section: blog
+	- scope:
+			path: ""
+			type: pages
+		values:
+			layout: page
+
+exclude:
+	- README-dev-notes.md
+	- docs
+	- posts
